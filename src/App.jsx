@@ -51,7 +51,7 @@ function GfGWeatherApp() {
             setInput('');
             setWeather({ ...weather, loading: true });
             const url = 'https://api.openweathermap.org/data/2.5/weather';
-            const api_key = '3c4cb40b0dafeaa2e1166a4a88ab6b52';
+            const api_key = import.meta.env.VITE_API_KEY;
             await axios
                 .get(url, {
                     params: {
